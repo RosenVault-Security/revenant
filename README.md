@@ -1,5 +1,5 @@
 # REVENANT
-
+*** update confirmed working with logstash 7.12 no change to instruction ***
 
 ![Screenshot 0](assets/img/mdt-hackathon0.png)
 
@@ -19,7 +19,7 @@ This is ready to use for anyone who wants to analyze their local fw logs or coll
 2. Download logstash 7.7.x from elasticsearch's website for your platform. You do not need to install unless you want to consistenly read your fw log in that case it will work just fine.
 3. Put the unpacked logstash folder in the ELK-IR folder
 4. Replace logstash.conf in the "config" folder of logstash with the logstash.conf from this repo.
-5. Copy the mappings from the windowsfw.template file into a new index template called windowsfw-* and save.
+5. Copy the mappings from the windowsfw.template file into a new index template called windowsfw-*, use dev tools to creat the new template.
 6. Either make a copy or take note of the location of the fwlog you want to analyze.
 7. Edit the powershell script Powershell-data-pull.ps1 to reflect the path to your pfirewall.log file in the beginning and a new folder called "data/logstash-dump" in the ELK-IR folder.
 8. Run the powershell script, it will generate a csv in the desired output folder.
